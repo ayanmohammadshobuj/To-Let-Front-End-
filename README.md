@@ -36,8 +36,9 @@ A web application for property listings, daily deals, and user management, built
 3. **Run the development server:**
    ```bash
    npm start
+   
    or
-   ```bash
+   
    ng serve
    Open in browser: Visit http://localhost:4200
 

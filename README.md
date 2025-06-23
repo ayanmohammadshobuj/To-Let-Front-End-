@@ -30,7 +30,7 @@ A web application for property listings, daily deals, and user management, built
    git clone https://github.com/ayanmohammadshobuj/To-Let-Front-End-.git
    cd to-let
 
-Install dependencies:
+2. **Install dependencies:**
 
 
 npm install --legacy-peer-deps

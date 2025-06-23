@@ -1,0 +1,262 @@
+.header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Top Bar */
+.top-bar {
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.logo a:hover {
+  color: #2980b9;
+}
+
+.right-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.create-ad-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.create-ad-btn:hover {
+  background-color: #27ae60;
+}
+
+.notification-icon {
+  font-size: 20px;
+  color: #7f8c8d;
+  transition: color 0.3s;
+}
+
+.notification-icon:hover {
+  color: #3498db;
+}
+
+.auth-controls {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-btn {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.auth-btn:hover {
+  color: #2980b9;
+}
+
+.auth-btn.register {
+  background-color: #3498db;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.auth-btn.register:hover {
+  background-color: #2980b9;
+}
+
+.auth-btn.login {
+    background-color: #2ecc71;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.auth-btn.login:hover {
+    background-color: #27ae60;
+}
+
+/* User Dropdown */
+.user-dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #7f8c8d;
+  transition: color 0.3s;
+}
+
+.dropdown-toggle:hover {
+  color: #3498db;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  min-width: 180px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+.dropdown-menu a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #2c3e50;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f9fa;
+  color: #3498db;
+}
+
+/* Main Nav */
+.main-nav {
+  background-color: #f8f9fa;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #34495e;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: #3498db;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #7f8c8d;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .auth-controls, .notification-icon, .create-ad-btn {
+    display: none;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .main-nav.mobile-open {
+    transform: translateX(0);
+  }
+
+  .nav-links {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav-links a {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* Add this to src/app/layout/header/header.component.css */
+.dropdown-menu {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.dropdown-menu a {
+  padding: 10px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+/* In header.component.css */
+.user-icon {
+  color: #3498db;
+}
+
+.mat-menu-item mat-icon {
+  margin-right: 8px;
+  color: #3498db;
+}

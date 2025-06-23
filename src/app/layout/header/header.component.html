@@ -1,0 +1,60 @@
+<header class="header">
+  <!-- Top Partition -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="logo">
+        <a routerLink="/home">To-Let</a>
+      </div>
+
+      <div class="right-actions">
+        <button class="create-ad-btn" routerLink="/property/create" *ngIf="isAuthenticated">
+          <i class="fa fa-plus"></i> Create Ad
+        </button>
+
+        <a class="notification-icon" routerLink="/notification" *ngIf="isAuthenticated">
+          <i class="fa fa-bell"></i>
+        </a>
+
+        <!-- Auth Controls -->
+        <div class="auth-controls" *ngIf="!isAuthenticated">
+          <a routerLink="/login" class="auth-btn login">Login</a>
+          <a routerLink="/register" class="auth-btn register">Register</a>
+        </div>
+
+        <!-- User Dropdown (Simple CSS implementation) -->
+        <div class="user-dropdown" *ngIf="isAuthenticated">
+          <button class="dropdown-toggle" (click)="toggleDropdown()">
+            <i class="fa fa-user"></i>
+          </button>
+
+          <div class="dropdown-menu" [ngClass]="{'show': isDropdownOpen}">
+            <a routerLink="/user/profile">Profile</a>
+            <a routerLink="/user/profile-settings">Profile Settings</a>
+            <a routerLink="/user/verification">Account Verification</a>
+            <a routerLink="/user/earn">Earn</a>
+            <a routerLink="/user/settings">Settings</a>
+            <a routerLink="/property/my-ads">View My Ads</a>
+            <a (click)="logout()">Logout</a>
+          </div>
+        </div>
+
+        <button class="mobile-menu-toggle" (click)="toggleMobileMenu()">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Partition -->
+  <nav class="main-nav" [ngClass]="{'mobile-open': isMobileMenuOpen}">
+    <div class="container">
+      <ul class="nav-links">
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/property/list" routerLinkActive="active">Ad List</a></li>
+        <li><a routerLink="/search" routerLinkActive="active">Search</a></li>
+        <li><a routerLink="/chat" routerLinkActive="active" *ngIf="isAuthenticated">Messages</a></li>
+        <li><a routerLink="/user/favorites" routerLinkActive="active" *ngIf="isAuthenticated">Favorites</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>

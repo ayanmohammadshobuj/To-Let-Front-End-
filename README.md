@@ -49,11 +49,11 @@ A web application for property listings, daily deals, and user management, built
 
 ## Styling
 - **Bootstrap and Font Awesome are included via angular.json:**
-- node_modules/bootstrap/dist/css/bootstrap.min.css
--- node_modules/font-awesome/css/font-awesome.min.css
--- Notes
--- Angular Material is not used due to version conflicts.
--- All UI components use Bootstrap and custom CSS.
+  - node_modules/bootstrap/dist/css/bootstrap.min.css
+  - node_modules/font-awesome/css/font-awesome.min.css
+  - Notes
+  - Angular Material is not used due to version conflicts.
+  - All UI components use Bootstrap and custom CSS.
 
 ## License
 - MIT

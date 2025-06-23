@@ -1,27 +1,60 @@
-# ToLet
+# To-Let (Frontend)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+A web application for property listings, daily deals, and user management, built with Angular.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- User authentication (login, register, profile)
+- Property ad creation and management
+- Daily deals and explore menu
+- User notifications
+- Favorites, messages, and settings
+- Responsive design with Bootstrap
 
-## Code scaffolding
+## Tech Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 18
+- Bootstrap 5
+- RxJS
+- Font Awesome
 
-## Build
+## Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js (v18 or higher recommended)
+- npm
 
-## Running unit tests
+## Getting Started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ayanmohammadshobuj/To-Let-Front-End-.git
+   cd to-let
 
-## Running end-to-end tests
+Install dependencies:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+npm install --legacy-peer-deps
+Run the development server:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+npm start
+or
+
+
+ng serve
+Open in browser: Visit http://localhost:4200
+
+
+Project Structure
+src/app/layout/header/ - Header component (navigation, user dropdown)
+src/app/features/home/ - Home page and related features
+src/app/core/authentication/ - Auth service and guards
+Styling
+Bootstrap and Font Awesome are included via angular.json:
+node_modules/bootstrap/dist/css/bootstrap.min.css
+node_modules/font-awesome/css/font-awesome.min.css
+Notes
+Angular Material is not used due to version conflicts.
+All UI components use Bootstrap and custom CSS.
+License
+MIT

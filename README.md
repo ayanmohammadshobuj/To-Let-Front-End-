@@ -48,8 +48,8 @@ A web application for property listings, daily deals, and user management, built
 - src/app/core/authentication/ - Auth service and guards
 
 ## Styling
-- Bootstrap and Font Awesome are included via angular.json:
--- node_modules/bootstrap/dist/css/bootstrap.min.css
+- **Bootstrap and Font Awesome are included via angular.json:**
+- node_modules/bootstrap/dist/css/bootstrap.min.css
 -- node_modules/font-awesome/css/font-awesome.min.css
 -- Notes
 -- Angular Material is not used due to version conflicts.

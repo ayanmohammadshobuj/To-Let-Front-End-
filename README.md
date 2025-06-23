@@ -31,18 +31,15 @@ A web application for property listings, daily deals, and user management, built
    cd to-let
 
 2. **Install dependencies:**
-
-
-npm install --legacy-peer-deps
-Run the development server:
-
-
-npm start
-or
-
-
-ng serve
-Open in browser: Visit http://localhost:4200
+   ```bash
+   npm install --legacy-peer-deps
+3. **Run the development server:**
+   ```bash
+   npm start
+  or
+   ```bash
+   ng serve
+   Open in browser: Visit http://localhost:4200
 
 
 Project Structure
